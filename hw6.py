@@ -165,3 +165,23 @@ lst = [5, 4, 17, 9, 8, 10]
 modify_list(lst)
 print(lst)
 print("__________________")
+
+# 11.	*Сгенерировать список всех простых чисел до 100.
+print("Доп задание 11")
+
+
+def find_primes():
+    """
+    Функция выводит все простые числа в промежутке от 1 до 100.
+    """
+    primes = []
+    for num in range(2, 100):
+        for i in range(2, int(num / 2) + 1):
+            if (num % i) == 0:
+                break
+        else:
+            primes.append(num)
+    return primes
+
+
+print(find_primes())
